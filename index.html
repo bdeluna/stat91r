@@ -1,0 +1,47 @@
+<html>
+<head>
+    <title>Stat 91r - Brian de Luna</title>
+
+    <!-- Load Google Font -->
+    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+
+    <!-- CSS libraries -->
+    <link href="css/vis.min.css" rel="stylesheet" type="text/css"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+
+    <!-- JS libraries -->
+    <script type="text/javascript" src="libs/jquery.min.js"></script>
+    <script type="text/javascript" src="libs/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="libs/bootstrap.min.js"></script>
+    <script type="text/javascript" src="libs/exampleUtil.js"></script>
+    <script type="text/javascript" src="libs/vis.min.js"></script>
+    <script type="text/javascript" src="libs/bloodhound.min.js"></script>
+    <script type="text/javascript" src="libs/typeahead.jquery.min.js"></script>
+    <script type="text/javascript" src="libs/typeahead.bundle.min.js"></script>
+
+    <!-- Custom JS files -->
+    <script type="text/javascript" src="js/objects.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+</head>
+
+<body onload="draw(orig_nodes, orig_edges)">
+
+    <div class="form-group row">
+        <div>
+            <label for="genre-form">Choose a genre to zone in on!</label>
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <input id="genre-form" type="text" class="form-control typeahead tt-query" autocomplete="off" spellcheck="false">
+            <button id="filter-button" type="button" class="btn btn-primary" onclick="filter_net()">Filter</button>
+            <button type="button" class="btn btn-danger" onclick="draw(orig_nodes, orig_edges)">Reset Graph</button>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+    <div id="mynetwork"></div>
+
+</body>
+</html>
